@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get install -y git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-    
+
 # Set the working directory
 WORKDIR /app
 
@@ -38,4 +38,4 @@ RUN python -m unittest discover -s tests
 FROM base AS final
 
 # Run the application
-CMD ["python", "app.py"]
+CMD ["python", "main/app.py"]
